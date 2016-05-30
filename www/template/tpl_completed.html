@@ -1,9 +1,9 @@
-<ion-view title="ToDo App">
+<ion-view title="ToDo App" cache-view="false">
     <div class="bar bar-subheader">
         <div class="tabs-striped tabs-background-royal tabs-color-light">
             <div class="tabs">
                 <a class="tab-item" ui-sref="app">
-                    Pendiente 
+                    Pendiente
                 </a>
                 <a class="tab-item active" ui-sref="#">
                     Completadas
@@ -13,8 +13,8 @@
     </div>
 
   <ion-content class="padding has-subheader">
-  
-    <div class="card text-wrapper" ng-repeat="task in home.tasks" ng-show="task.complete === true">
+
+    <div class="card text-wrapper" ng-repeat="task in home.tasks" ng-if="task.complete === true">
         <ion-item class="item-body">
             <!--Descripción de la Tarea-->
             <h2 class="title-task">{{ task.description | uppercase}}</h2>

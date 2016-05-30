@@ -1,13 +1,21 @@
-<ion-view title="Detalles" cache-view="false">
+<ion-view title="Crear Nueva" cache-view="false">
   <ion-content class="padding">
     <ion-list class="item-body text-wrapper">
        <label class="item item-input item-floating-label">
             <span class="input-label">Descripción</span>
             <input type="text" placeholder="Descripción" ng-model="detail.task.description">
         </label>
-        <button class="button button-block secundary-color">Guardar Cambios</button>
+
+        <button class="button button-block secundary-color" ng-click="detail.addTask(this.task)">Añadir</button>
         <button class="button button-block secundary-color" ui-sref="app">Volver</button>
     </ion-list>
 
   </ion-content>
+  <!--Footer
+  <div class="bar bar-footer">
+    <div class="title" style="color: white">
+        <i class="icon ion-plus-circled"></i>
+        Nueva Tarea
+    </div>
+  </div>-->
 </ion-view>

@@ -1,4 +1,4 @@
-<ion-view title="ToDo App">
+<ion-view title="ToDo App" cache-view="false">
     <div class="bar bar-subheader">
         <div class="tabs-striped tabs-background-royal tabs-color-light">
             <div class="tabs">
@@ -13,8 +13,8 @@
     </div>
 
   <ion-content class="padding has-subheader">
-  
-    <div class="card text-wrapper" ng-repeat="task in home.tasks track by $index" ng-show="task.complete == false" >
+
+    <div class="card text-wrapper" ng-repeat="task in home.tasks track by $index" ng-if="task.complete == false" >
         <ion-item class="item-body">
             <!--Descripción de la Tarea-->
             <h2 class="title-task">{{ task.description | uppercase}}</h2>
@@ -42,13 +42,12 @@
     </div>
   </ion-content>
   <!--Footer-->
-  <div class="bar bar-footer">
-    <div class="title" style="color: white">
-    <a ui-sref="detail">
-        <i class="icon ion-plus-circled"></i>
-        Nueva Tarea
-    </a>
+  <div class="bar bar-footer secundary-color">
+    <div class="title">
+        <a ui-sref="create" style="text-decoration: none;">
+            <i class="icon ion-plus-circled"></i>
+            Nueva Tarea
+        </a>
     </div>
-
   </div>
 </ion-view>
