@@ -1,0 +1,46 @@
+<ion-view title="ToDo App">
+    <div class="bar bar-subheader">
+        <div class="tabs-striped tabs-background-royal tabs-color-light">
+            <div class="tabs">
+                <a class="tab-item" ui-sref="app">
+                    Pendiente 
+                </a>
+                <a class="tab-item active" ui-sref="#">
+                    Completadas
+                </a>
+            </div>
+         </div>
+    </div>
+
+  <ion-content class="padding has-subheader">
+  
+    <div class="card text-wrapper" ng-repeat="task in home.tasks" ng-show="task.complete === true">
+        <ion-item class="item-body">
+            <!--Descripción de la Tarea-->
+            <h2 class="title-task">{{ task.description | uppercase}}</h2>
+            <!--Fecha-->
+            <p>
+                <i class="icon ion-android-calendar icon-task"></i>
+                <span class="date-task">{{ task.date }}</span>
+            </p>
+        </ion-item>
+        <!-- Botones Inferiores -->
+        <div class="item item-divider tabs tabs-secundary tabs-icon-left">
+            <a href="#" class="tab-item" ng-click="home.setComplete(this.task)">
+                <i class="icon ion-android-done-all"></i>
+                No Completado
+            </a>
+            <a href="#" class="tab-item" ng-click="home.deleteTask(this.task.$index)">
+                <i class="icon ion-android-delete"></i>
+                Eliminar
+            </a>
+        </div>
+    </div>
+  </ion-content>
+  <div class="bar bar-footer">
+    <div class="title" style="color: white">
+        <i class="icon ion-plus-circled"></i>
+        Nueva Tarea
+    </div>
+  </div>
+</ion-view>
