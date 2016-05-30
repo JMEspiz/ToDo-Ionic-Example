@@ -7,7 +7,7 @@
 	width: 60px;
 	border-radius: 60%;
 	font-size: 2em;
-	padding: 0;	
+	padding: 0;
 }
 
 .title-task {
@@ -23,6 +23,7 @@
 	font-size: 0.8em;
 }
 
-.bar-footer {
-	background-color: #C2185B;
+.secundary-color {
+	background-color: #FF4081;
+	color: #FFF;
 }
