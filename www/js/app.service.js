@@ -6,6 +6,9 @@ angular
 
 	function TasksService(){
 		var container = [];
+		/**
+		*Datos temporales para Demo.
+		*/
 		var fakeData =[
 			{
 				id: 1,
@@ -37,7 +40,7 @@ angular
 			container.push(data);
 		});
 
-		this.getAllTask = function(){
+		this.getAllTasks = function(){
 			return container;
 		}
 
