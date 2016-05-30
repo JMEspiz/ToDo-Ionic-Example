@@ -7,13 +7,13 @@ angular
 	.config(configRoutes);
 
 	configRoutes.$injector = ['$stateProvider', '$urlRouterProvider'];
-	
+
 	/**
 	*@name configRoutes
 	*@desc Routing de la App.
 	*/
 	function configRoutes($stateProvider, $urlRouterProvider){
-		
+
 		/*
 		* @desc Ruta por defecto.
 		* @params {string} path.
@@ -21,7 +21,7 @@ angular
 		$urlRouterProvider.otherwise('/app');
 
 		/*
-		*@desc Rutas 
+		*@desc Rutas
 		*params {string} path, {object} state data
 		*/
 		$stateProvider
@@ -40,6 +40,12 @@ angular
 			.state('detail', {
 				url: '/detalles/:index',
 				templateUrl: 'template/tpl_detail.html',
+				controller: 'detailCtl',
+				controllerAs: 'detail'
+			})
+			.state('create', {
+				url: '/create',
+				templateUrl: 'template/tpl_create.html',
 				controller: 'detailCtl',
 				controllerAs: 'detail'
 			})
