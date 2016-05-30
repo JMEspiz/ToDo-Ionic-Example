@@ -14,12 +14,12 @@ angular
 		vm.addTask = function(){
 			var task = {};
 			task.description = vm.task.description;
+			task.complete = false;
 			Tasks.addTask(task);
-			Tasks.$watch;
 		}
+
+
 
 		ionicMaterialInk.displayEffect();
 		ionicMaterialMotion.ripple();
 	}
-
-
